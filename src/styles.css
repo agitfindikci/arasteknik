@@ -51,6 +51,14 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-amber: var(--amber);
+  --color-amber-foreground: var(--amber-foreground);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: "Hind", system-ui, sans-serif;
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -62,15 +70,22 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --radius: 0.75rem;
+  --navy: oklch(0.208 0.042 265.755);
+  --navy-foreground: oklch(0.98 0 0);
+  --amber: oklch(0.769 0.165 70.08);
+  --amber-foreground: oklch(0.2 0.04 265);
+  --whatsapp: oklch(0.62 0.16 155);
+  --whatsapp-foreground: oklch(0.99 0 0);
+  --shadow-cta: 0 10px 25px -8px color-mix(in oklab, var(--amber) 60%, transparent);
+  --background: oklch(0.975 0.004 250);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.769 0.165 70.08);
+  --primary-foreground: oklch(0.2 0.04 265);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -142,3 +157,8 @@
     color: var(--color-foreground);
   }
 }
+
+@utility shadow-cta { box-shadow: var(--shadow-cta); }
+@utility pulse-ring { animation: pulse-ring 2s infinite; }
+@keyframes pulse-ring { 0%{box-shadow:0 0 0 0 color-mix(in oklab,var(--amber) 70%,transparent)} 70%{box-shadow:0 0 0 14px transparent} 100%{box-shadow:0 0 0 0 transparent} }
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-0.01em}
