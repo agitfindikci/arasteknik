@@ -267,7 +267,7 @@ function ServiceForm() {
 function Reviews() {
   const [i, setI] = useState(0);
   useEffect(() => { const t = setInterval(() => setI((x) => (x + 1) % reviews.length), 6000); return () => clearInterval(t); }, []);
-  const r = reviews[i];
+  const r = reviews[i] ?? reviews[0]!;
   return (
     <section id="yorumlar" className="mx-auto max-w-3xl px-4 py-16">
       <SectionTitle k="Müşteri Yorumları" t="Google'da 4.8 Puan, 103+ Yorum" />
