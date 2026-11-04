@@ -300,12 +300,12 @@ function Footer() {
         <div className="space-y-4">
           <div className="font-display text-xl">ARAS TEKNİK</div>
           <p className="text-navy-foreground/70">Beyaz Eşya, Kombi, Klima ve TV Servisi</p>
-          <p className="flex gap-2"><MapPin className="h-5 w-5 shrink-0 text-amber" />Olgunlar Mah. Sultan Fatih Cd. No: 12/E, Merkez / Elazığ</p>
+          <p className="flex gap-2"><MapPin className="h-5 w-5 shrink-0 text-amber" />Üniversite Mah. Hanköyü Sk. No: 41/A, 23270 Merkez / Elazığ</p>
           <a href={TEL} className="flex gap-2 hover:text-amber"><Phone className="h-5 w-5 text-amber" />{PHONE}</a>
           <p className="flex gap-2"><Clock className="h-5 w-5 text-amber" />7/24 Açık</p>
         </div>
         <iframe title="Aras Teknik konum" className="h-64 w-full rounded-2xl border-0" loading="lazy"
-          src="https://www.google.com/maps?q=Olgunlar+Sultan+Fatih+Cd.+12+E+Elaz%C4%B1%C4%9F&output=embed" />
+          src="https://www.google.com/maps?q=%C3%9Cniversite+Mahallesi+Hank%C3%B6y%C3%BC+Sokak+41+A+23270+Elaz%C4%B1%C4%9F+Merkez&output=embed" />
       </div>
       <div className="border-t border-navy-foreground/10 py-5 text-center text-sm text-navy-foreground/60">© {new Date().getFullYear()} Aras Teknik – Elazığ. Tüm hakları saklıdır.</div>
     </footer>
