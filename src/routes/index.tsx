@@ -123,8 +123,8 @@ function Hero() {
             <WaBtn />
           </div>
         </div>
-        <div className="hidden overflow-hidden rounded-2xl border-4 border-navy-foreground/10 md:block">
-          <img src={shopEntrance.url} alt="Aras Teknik dükkan girişi" className="h-full w-full object-cover" />
+        <div className="relative hidden overflow-hidden rounded-2xl border-4 border-navy-foreground/10 md:block">
+          <img src={shopEntrance.url} alt="Aras Teknik dükkan girişi" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
     </section>
