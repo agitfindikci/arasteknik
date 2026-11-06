@@ -5,7 +5,7 @@ import {
   Flame, Snowflake, WashingMachine, Refrigerator, Tv, ChevronLeft, ChevronRight, CheckCircle2,
 } from "lucide-react";
 import storefront from "@/assets/storefront.jpg";
-import washer from "@/assets/washer-repair.jpg";
+import shopEntrance from "@/assets/dukkan-girisi.png.asset.json";
 import dishwasher from "@/assets/dishwasher-repair.jpg";
 import acService from "@/assets/ac-service.jpg";
 import acOutdoor from "@/assets/ac-outdoor.jpg";
@@ -123,8 +123,8 @@ function Hero() {
             <WaBtn />
           </div>
         </div>
-        <div className="hidden overflow-hidden rounded-2xl border-4 border-navy-foreground/10 md:block">
-          <img src={washer} alt="Ustamız çamaşır makinesi tamir ederken" className="h-full w-full object-cover" />
+        <div className="relative hidden overflow-hidden rounded-2xl border-4 border-navy-foreground/10 md:block">
+          <img src={shopEntrance.url} alt="Aras Teknik dükkan girişi" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
     </section>
