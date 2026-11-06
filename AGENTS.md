@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Use absolute hosted URLs for CDN asset pointers on pages deployed outside Lovable; external hosts do not serve the relative Lovable asset endpoint.
