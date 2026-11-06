@@ -12,6 +12,10 @@ import acOutdoor from "@/assets/ac-outdoor.jpg";
 import fridgeOpen from "@/assets/fridge-open.jpg";
 import floorAc from "@/assets/floor-ac.jpg";
 
+// Keep the hosted photo URL absolute so external Cloudflare Pages deployments
+// do not look for Lovable's asset endpoint on their own domain.
+const SHOP_ENTRANCE_URL = new URL(shopEntrance.url, "https://arasteknik.lovable.app").href;
+
 const PHONE = "0532 369 39 23";
 const TEL = "tel:+905323693923";
 const WA = "https://wa.me/905323693923";
@@ -24,6 +28,10 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Elazığ'da kombi, klima, beyaz eşya ve TV arızalarına aynı gün kapıda servis. 1 yıl garanti, orijinal parça, 7/24 acil ekip. 0532 369 39 23" },
       { property: "og:title", content: "Aras Teknik – Elazığ 7/24 Teknik Servis" },
       { property: "og:description", content: "Kombi, klima, beyaz eşya ve TV tamiri. Aynı gün servis, 1 yıl garanti. Google puanı 4.8." },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: SHOP_ENTRANCE_URL },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: SHOP_ENTRANCE_URL },
     ],
   }),
   component: Index,
@@ -123,8 +131,8 @@ function Hero() {
             <WaBtn />
           </div>
         </div>
-        <div className="relative hidden overflow-hidden rounded-2xl border-4 border-navy-foreground/10 md:block">
-          <img src={shopEntrance.url} alt="Aras Teknik dükkan girişi" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl border-4 border-navy-foreground/10 md:mx-0 md:aspect-auto md:max-w-none">
+          <img src={SHOP_ENTRANCE_URL} alt="Aras Teknik dükkan girişi" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
     </section>
