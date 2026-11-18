@@ -9,4 +9,4 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Use absolute hosted URLs for CDN asset pointers on pages deployed outside Lovable; external hosts do not serve the relative Lovable asset endpoint.
+- Scroll-in animations use the shared Reveal component (IntersectionObserver + .reveal CSS in styles.css) and respect prefers-reduced-motion; reuse it instead of adding an animation library.
